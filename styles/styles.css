@@ -16,7 +16,6 @@ html {
   height: 100%;
 }
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -29,59 +28,56 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
 .button {
-  font-family: inherit;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 20px;
   font-weight: 700;
-  width: 160px;
-  height: 48px;
   text-align: center;
   color: #ffffff;
   background-color: #83B3D3;
   text-transform: uppercase;
-}
-
-/* Light */
-.button-light {
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 400;
-  color: #FFFFFF;
-  text-transform: none;
-  background-color: inherit;
-}
-/* Page */
-
-.page-header {
-  color: #000000;
-  background: #ffffff;
+  border: 0;
+  border-radius: 4px;
 }
 .navigation {
-
-  width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navigation-list {
   width: 460px;
-  margin: 0;
-  padding: 0;
+  list-style: none;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 .navigation-user {
   max-width: 300px;
-  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 .navigation-link {
   font-size: 20px;
-  line-height: 26px;
-  font-width: 700;
-  color: inherit;
+  line-height: 24px;
+  font-weight: 700;
   text-decoration: none;
+  color: #000000;
 }
-.main-container {
-  flex-grow: 1;
+.navigation-link-heder {
+  text-transform: uppercase;
+  background: #756157;
+  padding: 8px 34px;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
 }
 .banner-index {
   color: #000000;
@@ -96,24 +92,52 @@ body {
   margin: 0 auto;
 }
 .welcome-index {
-  display: block;
-  margin: 0 auto;
+  padding: 51px 371px 82px 371px;
+}
+.main-index {
+  margin: 0;
 }
 .advantages {
   text-align: center;
-  font-size: 22px;
+}
+.advantages-title-paragraph {
+  font-size: 30px;
   line-height: 36px;
+  font-weight: 700;
+  padding-top: 69px;
+  margin: 0;
+  text-align: center;
+}
+.advantages-description-paragraph {
+  font-size: 22px;
+  line-height: 26px;
   color: #333333;
+  padding-top: 25px;
+  padding-bottom: 90px;
+  margin: 0;
+  text-align: center;
+}
+.advantages-list {
+  line-height: 21px;
+  color: #333333;
+}
+.advantages-item {
+  list-style: none;
+}
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+.advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
 }
 .services {
   display: flex;
   justify-content: space-between;
-}
-.advantages-list {
-  font-size: 18px;
-  line-height: 21px;
-  color: #333333;
-  text-align: center;
 }
 .advantages-cold-light {
   color: #ffffff;
@@ -128,7 +152,6 @@ body {
   text-transform: uppercase;
 }
 .advantages-cold-light p {
-  font-size: 18px;
   line-height: 21px;
   text-align: center;
 }
@@ -145,12 +168,10 @@ body {
   text-transform: uppercase;
 }
 .cold-transparent p {
-  font-size: 18px;
   line-height: 21px;
   text-align: center;
 }
 .parent-background {
-  font-size: 18px;
   line-height: 21px;
   text-align: center;
   color: #333333;
@@ -165,7 +186,7 @@ body {
 }
 
 .transparent-light {
-  background: rgba(131, 179, 211, 0.2);
+  background: #83b3d333;
 }
 
 .transparent-light h3 {
@@ -176,12 +197,26 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-
 .hotel-search {
+  text-align: center;
+}
+.hotel-search-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+.hotel-search-description {
   font-size: 22px;
   line-height: 26px;
+  padding-top: 20px;
+  margin: 0;
+}
+.hotel-search-button {
+  background: #756157;
+  padding: 8px 50px;
   text-align: center;
-  color: #333333;
+  margin-bottom: 96px;
 }
 .thumbnail {
   font-weight: 700;
@@ -191,54 +226,42 @@ body {
   color: #000000;
 }
 .newsletter {
-  font-size: 22px;
-  line-height: 26px;
   background-image: url("../images/photo-subscription.jpg");
-  background-size: 100% auto;
-  height: 411px;
+  background-size: cover;
   background-repeat: no-repeat;
-  color: #ffffff;
   background-color: #83B3D3;
   text-align: center;
 }
-.field {
-  font-size: 18px;
-  line-height: 26px;
-}
-.page-footer {
-  display: flex;
-  justify-content: space-between;
-}
-footer-social-list {
-  width: 110px;
-  padding-left: 72px;
-}
-.footer-contacts-address-phone {
-  font-size: 40px;
-  line-height: 40px;
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
-  text-transform: uppercase;
-
-}
-.footer-contacts-logo {
-  width: 115px;
-  padding-right: 71px;
-}
-.page-footer-title {
+.newsletter-title {
   font-size: 30px;
   line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 96px;
+  margin: 0;
 }
+.newsletter-description {
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+  padding-top: 20px;
+  margin: 0;
+}
+.field {
+  line-height: 26px;
+}
+.newsletter-button {
+  font-size: 20px;
+  line-height: 36px;
+  padding: 8px 50px;
+}
+
+/*Страница каталога*/
 
 .inner-header {
   color: #000000;
   background-color: #ADD8E6;
   background-image: url("../images/hotels-background.jpg");
-  /*background-image: url("../images/lower-decor.png");*/
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .inner-header-title {
@@ -247,33 +270,51 @@ footer-social-list {
   line-height: 78px;
   font-weight: 700;
 }
+.breadcrumbs {
+  list-style: none;
+}
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
 }
 .catalog-filter {
-  font-size: 18px;
   line-height: 23px;
   color: #ffffff;
 }
 .catalog-filter-title {
   font-size: 20px;
-  line-height: 26px;
+  line-height: 24px;
   font-weight: 700;
 }
 .catalog-filter-list {
-  font-size: 18px;
   line-height: 23px;
+  list-style: none;
 }
 .total-hotels {
   font-weight: 700;
   font-size: 30px;
-  line-height: 39px;
+  line-height: 36px;
+}
+.hotel-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hotel-cards {
+  width: 340px;
+  text-align: center;
+  padding: 16px;
+}
+.hotel-cards-link {
+  text-decoration: none;
+}
+.hotel-cards-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
 }
 .hotel-cards-price {
-  font-size: 18px;
-  line-height: 23px;
   font-weight: 400;
 }
 .more-detailed {
@@ -282,6 +323,13 @@ footer-social-list {
   height: 37px;
   background: #756257;
   text-decoration: none;
+  padding: 8px 26px;
+  text-transform: uppercase;
+}
+.rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 .pagination-show-more {
   width: 620px;
@@ -294,6 +342,9 @@ footer-social-list {
   font-size: 20px;
   line-height: 26px;
   text-decoration: none;
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 
 .pagination-link {
@@ -304,26 +355,44 @@ footer-social-list {
   text-decoration: none;
 }
 
-.pagination-current {
-  color: #000000;
-  background-color: #F2F2F2;
-}
-
 .pagination-disabled {
   background-color: #595959;
 }
 .inner-newsletter {
-  font-size: 22px;
-  line-height: 26px;
-  height: 411px;
-  background-repeat: no-repeat;
   color: #333333;
   text-align: center;
 }
-.inner-newsletter h2 {
+.inner-newsletter-title {
+  font-size: 30px;
+  line-height: 36px;
+}
+.inner-newsletter-description {
+  font-size: 22px;
+  line-height: 26px;
+  padding-top: 20px;
+}
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-social-list {
+  width: 110px;
+  padding-left: 72px;
+  list-style: none;
+}
+.footer-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding-top: 45px;
+  padding-bottom: 35px;
+  text-decoration: none;
   color: #000000;
 }
-                                                                                                                                                                                                                                          <label class="visually-hidden" for="newsletter-email">Email</label>
+.footer-contacts-logo {
+  padding-right: 33px;
+}
+                                                                                                                                                                                                                                     <label class="visually-hidden" for="newsletter-email">Email</label>
                                                                                                                                                                                                                                                                                                        <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
                                                                                                                                                                                                                                                                                                                                                                                                                 <button class="button" type="submit">Подписаться</button>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </form>
